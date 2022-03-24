@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="widget_description">Simple weather widget.</string>
+    <string name="widget_title">Weather App Widget</string>
 </resources>
