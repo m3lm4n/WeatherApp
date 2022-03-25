@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/background_widget_outer"
+    android:clipToOutline="true"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/city_name"
+        android:layout_alignEnd="@id/city_name"
+        android:src="@drawable/ic_cloudy_with_rain_and_snow" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/temperature_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/widget_title"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:includeFontPadding="false"
+        android:text="20°"
+        android:textColor="@color/queenPink"
+        android:textSize="40sp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="Wrocław"
+        android:textColor="@color/queenPink"
+        android:textSize="12sp" />
+
+</RelativeLayout>

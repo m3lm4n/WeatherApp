@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Work/WeatherApp/app/src/main/res/drawable/background_widget_outer.xml" value="0.323" />
+        <entry key="..\:/Work/WeatherApp/app/src/main/res/layout/activity_configuration.xml" value="0.31567028985507245" />
         <entry key="..\:/Work/WeatherApp/app/src/main/res/layout/basic_widget_layout.xml" value="0.559375" />
+        <entry key="..\:/Work/WeatherApp/app/src/main/res/layout/widget_basic.xml" value="0.25" />
         <entry key="..\:/Work/WeatherApp/app/src/main/res/xml/weatherapp_widget_provider.xml" value="0.559375" />
       </map>
     </option>
