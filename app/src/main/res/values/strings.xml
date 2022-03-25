@@ -2,4 +2,6 @@
     <string name="app_name">WeatherApp</string>
     <string name="widget_description">Simple weather widget.</string>
     <string name="widget_title">Weather App Widget</string>
+    <string name="location_permission_row_title">Grant location permission</string>
+    <string name="location_permission_button_text">Grant</string>
 </resources>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:minWidth="40dp"
-    android:minHeight="40dp"
-    android:targetCellWidth="1"
-    android:targetCellHeight="1"
+    android:configure="com.lastowski.weatherapp.view.widget.configuration.ConfigurationActivity"
+    android:description="@string/widget_description"
+    android:initialLayout="@layout/widget_basic"
     android:maxResizeWidth="250dp"
     android:maxResizeHeight="120dp"
-    android:updatePeriodMillis="86400000"
-    android:initialLayout="@layout/widget_basic"
+    android:minWidth="40dp"
+    android:minHeight="40dp"
     android:previewLayout="@layout/widget_basic"
-    android:description="@string/widget_description"
     android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="1"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="86400000"
     android:widgetCategory="home_screen"
-    android:widgetFeatures="reconfigurable|configuration_optional">
-</appwidget-provider>
+    android:widgetFeatures="reconfigurable|configuration_optional"/>

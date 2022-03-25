@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewState"
+            type="com.lastowski.weatherapp.view.model.ConfigurationViewState" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/grant_location_permission_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/location_permission_row_title"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/grant_location_permission_spacer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/grant_location_permission_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/location_permission_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/grant_location_permission_spacer"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grant_location_permission_button" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grant_location_permission_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{ viewState.locationPermissionSectionVisible ? View.VISIBLE : View.GONE }"
+            app:constraint_referenced_ids="grant_location_permission_button,grant_location_permission_description,grant_location_permission_spacer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
