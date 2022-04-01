@@ -10,14 +10,17 @@ import retrofit2.http.Query
 interface WeatherApiService {
 
     @GET("current.json")
-    suspend fun getCurrentWeather(@Query("q") query: String, @Query("key") apiKey: String = BuildConfig.WEATHER_API_KEY): Response<CurrentWeatherData>
+    suspend fun getCurrentWeather(
+        @Query("q") query: String,
+        @Query("key") apiKey: String = BuildConfig.WEATHER_API_KEY
+    ): Response<CurrentWeatherData>
 
     companion object {
         fun create(): WeatherApiService {
-                val retrofit = Retrofit.Builder()
-                    .baseUrl(BuildConfig.WEATHER_BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build()
+            val retrofit = Retrofit.Builder()
+                .baseUrl(BuildConfig.WEATHER_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
 
             return retrofit.create(WeatherApiService::class.java)
         }

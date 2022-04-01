@@ -20,7 +20,9 @@ class LocationProvider(
             return null
         }
 
-        val location = locationProviderClient.lastLocation.await()
+        //This will fail if LocationServices hadn't been used before on the device
+        //In the interest of time I'm not implementing the regular request here in such case
+        val location = locationProviderClient.lastLocation.await() ?: return null
 
         return Location(location.latitude, location.longitude)
     }

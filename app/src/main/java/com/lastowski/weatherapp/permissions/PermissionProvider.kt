@@ -31,7 +31,8 @@ class PermissionProvider(val appContext: Context) : ActivityLifecycleAdapter(),
             else -> GrantState.Denied
         }
 
-    fun hasPermission(permission: Permission): Boolean = appContext.checkSelfPermission(permission.name) == PackageManager.PERMISSION_GRANTED
+    fun hasPermission(permission: Permission): Boolean =
+        appContext.checkSelfPermission(permission.name) == PackageManager.PERMISSION_GRANTED
 
     fun requestPermission(permission: Permission) {
         val activity = currentActivity ?: return

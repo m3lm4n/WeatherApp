@@ -18,7 +18,7 @@
         <activity android:name=".view.widget.configuration.ConfigurationActivity" />
 
         <receiver
-            android:name=".view.WeatherAppWidgetProvider"
+            android:name=".view.widget.WeatherAppWidgetProvider"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

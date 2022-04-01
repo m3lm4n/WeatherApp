@@ -4,6 +4,6 @@
     <corners
         android:radius="@android:dimen/system_app_widget_background_radius" />
 
-    <solid android:color="@color/gunmetal" />
+    <solid android:color="@color/cadetBlue" />
 
 </shape>
