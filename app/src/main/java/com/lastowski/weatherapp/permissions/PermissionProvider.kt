@@ -1,11 +1,11 @@
-package com.lastowski.weatherapp.permssions
+package com.lastowski.weatherapp.permissions
 
 import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import com.lastowski.weatherapp.common.ActivityLifecycleAdapter
-import com.lastowski.weatherapp.permssions.AppPermissionsState.Companion.asPermissionsState
+import com.lastowski.weatherapp.permissions.AppPermissionsState.Companion.asPermissionsState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
@@ -21,15 +21,17 @@ class PermissionProvider(val appContext: Context) : ActivityLifecycleAdapter(),
 
     init {
         _permissionsState.value = AppPermissionsState(
-            hasPermission(Permission.CoarseLocation)
+            checkPermission(Permission.CoarseLocation)
         )
     }
 
-    private fun hasPermission(permission: Permission): GrantState =
+    private fun checkPermission(permission: Permission): GrantState =
         when (appContext.checkSelfPermission(permission.name)) {
             PackageManager.PERMISSION_GRANTED -> GrantState.Granted
             else -> GrantState.Denied
         }
+
+    fun hasPermission(permission: Permission): Boolean = appContext.checkSelfPermission(permission.name) == PackageManager.PERMISSION_GRANTED
 
     fun requestPermission(permission: Permission) {
         val activity = currentActivity ?: return

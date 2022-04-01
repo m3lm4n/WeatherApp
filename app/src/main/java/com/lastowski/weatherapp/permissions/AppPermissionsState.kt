@@ -1,6 +1,6 @@
-package com.lastowski.weatherapp.permssions
+package com.lastowski.weatherapp.permissions
 
-import com.lastowski.weatherapp.permssions.GrantState.Companion.asGrantState
+import com.lastowski.weatherapp.permissions.GrantState.Companion.asGrantState
 
 data class AppPermissionsState(
     val locationGrantState: GrantState = GrantState.Denied

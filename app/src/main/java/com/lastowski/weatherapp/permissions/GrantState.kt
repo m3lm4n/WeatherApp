@@ -1,4 +1,4 @@
-package com.lastowski.weatherapp.permssions
+package com.lastowski.weatherapp.permissions
 
 import android.content.pm.PackageManager
 

@@ -2,8 +2,8 @@ package com.lastowski.weatherapp.view.model
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lastowski.weatherapp.permssions.GrantState
-import com.lastowski.weatherapp.permssions.PermissionProvider
+import com.lastowski.weatherapp.permissions.GrantState
+import com.lastowski.weatherapp.permissions.PermissionProvider
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.lastowski.weatherapp.databinding.ActivityConfigurationBinding
-import com.lastowski.weatherapp.permssions.PermissionRequestListener
+import com.lastowski.weatherapp.permissions.PermissionRequestListener
 import com.lastowski.weatherapp.view.model.ConfigurationViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
